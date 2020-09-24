@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Courses JavaScript Firebase</title>
     <link rel="stylesheet" href="./bootstrap4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
     <div class="container">
         <div class="alert alert-info text-center">Courses Stores JS & Firebase</div>
@@ -16,25 +18,52 @@
             <form>
                 <div class="form-group">
                     <label for="title">Title :</label>
-                    <input type="text" placeholder="books title ..." id="title" class="form-control">
+                    <input type="text" required placeholder="books title ..." id="title" class="form-control">
                 </div>
                 <div class="form-group">
                     <label for="title">Author :</label>
-                    <input type="text" placeholder="books author ..." id="author" class="form-control">
+                    <input type="text" required placeholder="books author ..." id="author" class="form-control">
                 </div>
-                <button type="submit" id="btnSave" class="btn btn-primary"><i class="fas fa-save"></i> Save</button>
+                <button type="submit"  class="btn btn-primary"><i class="fas fa-save"></i> Save</button>
             </form>
         </div>
-        
+
         <div class="jumbotron">
             <div class="container">
                 <h5>List of books</h5>
-                <p>Contents ...</p>
+
+<ul class="list-group" id="list">
+   
+</ul>
             </div>
         </div>
-        
+
     </div>
 
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-firestore.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyCIc3BvCXzm2QvcRknzaFSdpPpqlUw0jDY",
+            authDomain: "courses-bae8c.firebaseapp.com",
+            databaseURL: "https://courses-bae8c.firebaseio.com",
+            projectId: "courses-bae8c",
+            storageBucket: "courses-bae8c.appspot.com",
+            messagingSenderId: "704003646734",
+            appId: "1:704003646734:web:fb0ce58255fb2d2d4c635f"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="./bootstrap4.5.2/js/bootstrap.min.js"></script>
     <script src="./app.js"></script>
 </body>
