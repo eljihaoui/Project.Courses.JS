@@ -1,0 +1,17 @@
+*{
+    margin: 0px;
+}
+body{
+    font-family: "century gothic";
+    background-color: rgb(143, 81, 52);
+}
+.alert {
+    margin-top: 5px !important;
+    margin-bottom: 3px !important;
+    border-bottom: 1px solid indigo;
+    font-weight: bold;
+}
+.jumbotron {
+    padding: 10px;
+    margin-top: 1px !important;
+}
